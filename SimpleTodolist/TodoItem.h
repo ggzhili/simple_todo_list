@@ -1,4 +1,9 @@
-#ifndef TODOITEM_H
-#define TODOITEM_H
+#pragma once
 
-#endif // TODOITEM_H
+#include <QString>
+
+struct TodoItem
+{
+    QString title;
+    bool completed = false;
+};

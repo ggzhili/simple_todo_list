@@ -16,8 +16,8 @@ qt_add_qml_module(appSimpleTodolist
     URI SimpleTodolist
     QML_FILES
         Main.qml
-        QML_FILES TodoDelegate.qml
-        SOURCES TodoItem.cpp
+        QML_FILES
+        SOURCES
         SOURCES TodoItem.h
         SOURCES TodoModel.h
         SOURCES TodoModel.cpp
