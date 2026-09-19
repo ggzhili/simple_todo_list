@@ -5,7 +5,7 @@ import QtQuick.Controls
 
 ListView {
 
-
+    clip:true
     id:list
 
 
