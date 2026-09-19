@@ -12,7 +12,6 @@ ApplicationWindow {
 
     title: "Todo List"
 
-
     // 一列一列的视图，主视图
     ColumnLayout {
 
