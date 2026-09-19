@@ -3,15 +3,18 @@ import QtQuick
 
 Rectangle {
 
-    id: root
+
+    id:root
+
 
 
     width:
         parent.width
 
 
+
     height:
-        45
+        30
 
 
 
@@ -25,17 +28,23 @@ Rectangle {
 
 
 
+
+
     color:
 
         mouseArea.pressed
 
-        ? "#ffd6d6"
+        ? "#ffd0d0"
 
-        : hovered
+        :
 
-          ? "#ffe8e8"
+        hovered
 
-          : "#fff5f5"
+        ? "#ffe5e5"
+
+        : "#f2f2f2"
+
+
 
 
 
@@ -43,8 +52,16 @@ Rectangle {
         1
 
 
+
     border.color:
-        "#ffcccc"
+
+        hovered
+
+        ? "#ffcccc"
+
+        : "#e5e5e5"
+
+
 
 
 
@@ -52,9 +69,11 @@ Rectangle {
 
         mouseArea.pressed
 
-        ? 0.96
+        ? 0.97
 
         : 1
+
+
 
 
 
@@ -67,6 +86,20 @@ Rectangle {
         }
 
     }
+
+
+
+
+    Behavior on border.color {
+
+        ColorAnimation {
+
+            duration:150
+
+        }
+
+    }
+
 
 
 
@@ -85,10 +118,14 @@ Rectangle {
 
 
 
+
+
     Text {
+
 
         anchors.fill:
             parent
+
 
 
         text:
@@ -97,7 +134,14 @@ Rectangle {
 
 
         color:
-            "#e74c3c"
+
+            hovered
+
+            ? "#e74c3c"
+
+            : "#888888"
+
+
 
 
 
@@ -106,25 +150,49 @@ Rectangle {
 
 
 
+
+
         horizontalAlignment:
-            Text.AlignHCenter
+            Text.AlignLeft
 
 
 
         verticalAlignment:
             Text.AlignVCenter
 
+
+
+        leftPadding:
+            15
+
+
+
+        Behavior on color {
+
+            ColorAnimation {
+
+                duration:150
+
+            }
+
+        }
+
     }
+
+
 
 
 
     MouseArea {
 
-        id: mouseArea
+
+        id:mouseArea
+
 
 
         anchors.fill:
             parent
+
 
 
 
@@ -133,8 +201,10 @@ Rectangle {
 
 
 
+
         cursorShape:
             Qt.PointingHandCursor
+
 
 
 

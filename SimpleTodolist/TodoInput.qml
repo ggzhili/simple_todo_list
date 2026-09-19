@@ -18,7 +18,7 @@ RowLayout {
         Layout.fillWidth:true
 
 
-        height:45
+        height:30
 
 
 
@@ -173,7 +173,7 @@ RowLayout {
 
 
         height:
-            45
+            30
 
 
 

@@ -4,26 +4,44 @@ import QtQuick.Layouts
 
 Label {
 
+    id:titleLabel
+
+
     text:
         "待办事项清单"
+
 
 
     font.pixelSize:
         30
 
 
+
+    font.family:
+        "SimSun"
+
+
+
     Layout.alignment:
-        Qt.AlignHCenter
+        Qt.AlignLeft
 
 
 
-    opacity:0
+    Layout.leftMargin:
+        0
+
+
+
+    opacity:
+        0
 
 
 
     Component.onCompleted:
     {
-        appear.start()
+        Qt.callLater(function(){
+            appear.start()
+        })
     }
 
 
@@ -32,17 +50,30 @@ Label {
 
         id:appear
 
-        target:parent
 
-        property:"opacity"
+        target:
+            titleLabel
 
-        from:0
 
-        to:1
+        property:
+            "opacity"
 
-        duration:400
+
+        from:
+            0
+
+
+        to:
+            1
+
+
+        duration:
+            1500
+
 
         easing.type:
             Easing.OutCubic
+
     }
+
 }
